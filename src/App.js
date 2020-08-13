@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import AddTodo from './components/todo/AddTodo';
 import Todos from './components/todo/Todos';
@@ -58,6 +59,7 @@ class App extends Component {
 
   render() {
     return (
+      <Router>
       <div className="App">
         <div className="container">
         <Header />
@@ -66,6 +68,7 @@ class App extends Component {
         {this.markComplete} delTodo={this.delTodo}/>
       </div>
     </div>
+    </Router>
     );
   }
 };
